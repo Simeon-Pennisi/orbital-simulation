@@ -25,5 +25,7 @@ def integrate_earth_sun(tmax, dt=1e-3):
         r_earth = r_earth + v_earth * dt
         v_earth = v_earth + acceleration * dt
 
+        earth_positions.append(r_earth.copy())
+
     return np.array(earth_positions)
 
